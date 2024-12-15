@@ -8,17 +8,56 @@
 </head>
 <body>
     <div class="container">
-        <h1>老虎机游戏</h1>
-        <div class="slot-machine">
-            <div class="slot" id="slot1"></div>
-            <div class="slot" id="slot2"></div>
-            <div class="slot" id="slot3"></div>
+        <div class="slot-machine-cabinet">
+            <!-- 上部显示面板 -->
+            <div class="top-panel">
+                <div class="win-table"></div>
+                <!-- 添加动画容器 -->
+                <div class="animation-container">
+                    <!-- 待机动画元素 -->
+                    <div class="idle-animation">
+                        <div class="coin coin1">🪙</div>
+                        <div class="coin coin2">🪙</div>
+                        <div class="coin coin3">🪙</div>
+                        <div class="sparkle sparkle1">✨</div>
+                        <div class="sparkle sparkle2">✨</div>
+                    </div>
+                    <!-- 赢钱动画元素 -->
+                    <div class="win-animation hidden">
+                        <div class="win-coins"></div>
+                        <div class="win-text">BIG WIN!</div>
+                        <div class="win-sparkles"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 老虎机主体 -->
+            <div class="machine-body">
+                <div class="machine-title">LUCKY SLOT</div>
+                <div class="slot-window">
+                    <div class="slot-frame">
+                        <div class="slot" id="slot1"></div>
+                        <div class="slot" id="slot2"></div>
+                        <div class="slot" id="slot3"></div>
+                    </div>
+                </div>
+                <!-- 拉杆 -->
+                <div class="lever">
+                    <div class="lever-handle"></div>
+                </div>
+            </div>
+            
+            <!-- 底部面板 -->
+            <div class="bottom-panel">
+                <div class="machine-name">LUCKY SLOT</div>
+                <div class="jackpot-text">JACKPOT</div>
+                <div class="controls">
+                    <div class="balance">余额: <span id="balance">1000</span> 币</div>
+                    <button id="spinButton">开始转动</button>
+                </div>
+                <div id="result"></div>
+            </div>
         </div>
-        <div class="controls">
-            <div class="balance">余额: <span id="balance">1000</span> 币</div>
-            <button id="spinButton">开始转动</button>
-        </div>
-        <div id="result"></div>
     </div>
     <script src="script.js"></script>
 </body>
